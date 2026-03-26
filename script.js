@@ -17,45 +17,45 @@ const quizQuestions = [
     {
         question: "What is the capital of france?",
         answer: [
-            { text: "London", correct: false },
-            { text: "Berlin", correct: false },
-            { text: "Paris", correct: true },
-            { text: "madrid", correct: false },
+            {text: "London", correct: false},
+            {text: "Berlin", correct: false},
+            {text: "Paris", correct: true},
+            {text: "madrid", correct: false},
         ],
     },
     {
         question: "What is the capital of bihar?",
         answer: [
-            { text: "Patna", correct: true },
-            { text: "ara", correct: false },
-            { text: "Saran", correct: false },
-            { text: "Delhi", correct: false },
+            {text: "Patna", correct: true},
+            {text: "ara", correct: false},
+            {text: "Saran", correct: false},
+            {text: "Delhi", correct: false},
         ],
     },
     {
         question: "What is the capital of Delhi?",
         answer: [
-            { text: "M.P", correct: false },
-            { text: "U.P", correct: false },
-            { text: "Mumbai", correct: false },
-            { text: "New Delhi", correct: true },
+            {text: "M.P", correct: false},
+            {text: "U.P", correct: false},
+            {text: "Mumbai", correct: false},
+            {text: "New Delhi", correct: true},
         ],
     },
     {
         question: "What is the capital of uttar pradesh?",
         answer: [
-            { text: "Lucknow", correct: true },
-            { text: "Siliguri", correct: false },
-            { text: "Durgapur", correct: false },
-            { text: "Kolkata", correct: false },
+            {text: "Lucknow", correct: true},
+            {text: "Siliguri", correct: false},
+            {text: "Durgapur", correct: false},
+            {text: "Kolkata", correct: false},
         ],
     }, {
         question: "What is the capital of rajasthan?",
         answer: [
-            { text: "Ajmer", correct: false },
-            { text: "Jodhpur", correct: false },
-            { text: "Jaipur", correct: true },
-            { text: "Varanasi", correct: false },
+            {text: "Ajmer", correct: false},
+            {text: "Jodhpur", correct: false},
+            {text: "Jaipur", correct: true},
+            {text: "Varanasi", correct: false},
         ],
     },
 
@@ -89,7 +89,7 @@ function showQuestion() {
 
     currentQuestionSpan.textContent = currentQuestionIndex + 1;
 
-    const progressPercent = (currentQuestionIndex  / quizQuestions.length) *  100;
+    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
     progressBar.style.width = progressPercent + "%";
 
     questionText.textContent = currentQuestion.question;
@@ -103,14 +103,14 @@ function showQuestion() {
 
         button.dataset.correct = answer.correct
 
-        button.addEventListener("click",selectAnswer)
+        button.addEventListener("click", selectAnswer)
 
         answerContainer.appendChild(button);
     })
 }
 
-function  selectAnswer(event) {
-    if(answerDisabled) return
+function selectAnswer(event) {
+    if (answerDisabled) return
 
     answerDisabled = true;
 
@@ -120,23 +120,23 @@ function  selectAnswer(event) {
     Array.from(answerContainer.children).forEach(button => {
         if (button.dataset.correct === "true") {
             button.classList.add("correct");
-        }else {
+        } else {
             button.classList.add("incorrect");
         }
     });
-    if(isCorrect) {
+    if (isCorrect) {
         score++;
         scoreSpan.textContent = score;
     }
-   setTimeout(() =>{
-       currentQuestionIndex++;
+    setTimeout(() => {
+        currentQuestionIndex++;
 
-       if (currentQuestionIndex < quizQuestions.length) {
-           showQuestion();
-       }else{
-           showResults();
-       }
-   },1000)
+        if (currentQuestionIndex < quizQuestions.length) {
+            showQuestion();
+        } else {
+            showResults();
+        }
+    }, 1000)
 }
 
 function showResults() {
@@ -145,17 +145,17 @@ function showResults() {
 
     finalScoreSpan.textContent = score;
 
-    const percentage = (score / quizQuestions.length) *  100;
+    const percentage = (score / quizQuestions.length) * 100;
 
     if (percentage === 100) {
         resultMessage.textContent = "perfect! you're a genius";
-    }else if(percentage >= 80) {
+    } else if (percentage >= 80) {
         resultMessage.textContent = "Great job! you know you stuff!";
-    }else if(percentage >= 60) {
+    } else if (percentage >= 60) {
         resultMessage.textContent = "Good effort! keep learning!";
-    }else if(percentage >= 40) {
+    } else if (percentage >= 40) {
         resultMessage.textContent = "Not bad! try again to improve!";
-    }else {
+    } else {
         resultMessage.textContent = "Keep studying! you'll get better!";
     }
 }
