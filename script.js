@@ -15,7 +15,7 @@ const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
     {
-        question: "What is the capital of france?",
+        question: "What is the Capital of France?",
         answer: [
             {text: "London", correct: false},
             {text: "Berlin", correct: false},
@@ -24,7 +24,7 @@ const quizQuestions = [
         ],
     },
     {
-        question: "What is the capital of bihar?",
+        question: "What is the Capital of Bihar?",
         answer: [
             {text: "Patna", correct: true},
             {text: "ara", correct: false},
@@ -33,7 +33,7 @@ const quizQuestions = [
         ],
     },
     {
-        question: "What is the capital of Delhi?",
+        question: "What is the Capital of Delhi?",
         answer: [
             {text: "M.P", correct: false},
             {text: "U.P", correct: false},
@@ -42,7 +42,7 @@ const quizQuestions = [
         ],
     },
     {
-        question: "What is the capital of uttar pradesh?",
+        question: "What is the Capital of Uttar Pradesh?",
         answer: [
             {text: "Lucknow", correct: true},
             {text: "Siliguri", correct: false},
@@ -50,7 +50,7 @@ const quizQuestions = [
             {text: "Kolkata", correct: false},
         ],
     }, {
-        question: "What is the capital of rajasthan?",
+        question: "What is the Capital of Rajasthan?",
         answer: [
             {text: "Ajmer", correct: false},
             {text: "Jodhpur", correct: false},

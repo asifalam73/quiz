@@ -61,8 +61,8 @@ body {
 .answer-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 25px;
+    gap: 1px;
+    margin-bottom: 10px;
 }
 
 .answer-btn {
