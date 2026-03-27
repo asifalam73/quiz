@@ -141,6 +141,25 @@ button {
 button:hover {
     background-color: #d45b28;
 }
+.create-by{
+    background-color: #afa5a5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    position: fixed;
+    border-radius: 10px;
+}
+.create-by i{
+    color: red;
+}
+.create-by:hover{
+    background-color: #85afba;
+    color: #262626;
+}
 
 @media (max-width: 500px) {
     .screen {

@@ -136,7 +136,7 @@ function selectAnswer(event) {
         } else {
             showResults();
         }
-    }, 1000)
+    }, 3000)
 }
 
 function showResults() {
