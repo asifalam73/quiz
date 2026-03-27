@@ -143,6 +143,7 @@ button:hover {
 }
 .create-by{
     background-color: #afa5a5;
+    display: inline-block;
     width: 100%;
     text-align: center;
     padding: 10px 20px;
@@ -150,8 +151,10 @@ button:hover {
     letter-spacing: 1px;
     color: #fff;
     text-decoration: none;
-    position: fixed;
     border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 15px;
 }
 .create-by i{
     color: red;
